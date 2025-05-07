@@ -1,6 +1,6 @@
 .cards {
   padding: 4rem;
-  background: #fff;
+  background: #ffffff;
 }
 
 h1 {
@@ -66,7 +66,7 @@ h1 {
   font-size: 12px;
   font-weight: 700;
   color: #fff;
-  background-color: #1f98f4;
+  background-color: #f4821f;
   box-sizing: border-box;
 }
 
@@ -94,7 +94,7 @@ h1 {
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #000000;
   font-size: 18px;
   line-height: 24px;
 }

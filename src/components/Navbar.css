@@ -19,7 +19,6 @@
 }
 
 .navbar-logo {
-  color: #fff;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -27,6 +26,22 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  color: white; /* Default fallback */
+
+  /* Für GYM und GATE einzeln stylen – siehe HTML */
+}
+
+.gym {
+  color: rgb(255, 255, 255);
+}
+
+.gate {
+  background: linear-gradient(to right, #f49e16, #f8e540); /* Orange → Gelb */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .fa-typo3 {
@@ -50,7 +65,7 @@
 }
 
 .nav-links {
-  color: #fff;
+  color: #c86f0a;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -59,12 +74,12 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #c86f0a;
   transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-  color: #fff;
+  color: #c86f0a;
 }
 
 .nav-links-mobile {
@@ -118,6 +133,10 @@
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
+  }
+
+  .navbar-logo img {
+    margin-right: 40px; /* Abstand zwischen Logo und Text */
   }
 
   .menu-icon {
