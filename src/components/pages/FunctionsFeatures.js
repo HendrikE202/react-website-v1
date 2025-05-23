@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../App.css";
 import Footer from "../Footer";
 import HeroSection from "../HeroSection";
 import "./FunctionsFeatures.css";
 
+
+//Effect Hook to scroll to top on component mount
 export default function FunctionsFeatures() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
 

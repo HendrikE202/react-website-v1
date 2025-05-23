@@ -7,7 +7,9 @@ import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import FunctionsFeatures from './components/pages/FunctionsFeatures';
-
+import AboutUs from './components/pages/AboutUs';
+import DataSafetyGTC from './components/pages/DataSafetyGTC';
+ 
 function App() {
   return (
     <>
@@ -19,6 +21,9 @@ function App() {
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/functionsfeatures' component={FunctionsFeatures} />
+          <Route path='/aboutus' component={AboutUs} />
+          <Route path='/datasafetygtc' component={DataSafetyGTC} />
+          {/* Add more routes as needed */}
         </Switch>
       </Router>
     </>

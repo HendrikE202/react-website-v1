@@ -1,0 +1,200 @@
+/* --- Hero Section --- */
+.about-hero {
+  background: linear-gradient(120deg, #1e1e2f 60%, #e87306 100%);
+  color: #fff;
+  padding: 80px 0 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.about-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+.about-hero-content p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.92;
+}
+
+/* --- Values Section --- */
+.about-values {
+  background: #fff;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.about-values h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1e1e2f;
+}
+.about-values p {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+}
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+}
+.about-card {
+  background: #f7f8fa;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.08);
+  padding: 32px 28px;
+  width: 260px;
+  transition: transform 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(79, 140, 255, 0.18);
+}
+.about-card span {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+.about-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #f7aa61;
+}
+.about-card p {
+  color: #333;
+  font-size: 1rem;
+  opacity: 0.92;
+}
+
+/* --- Team Section --- */
+.about-team {
+  background: linear-gradient(120deg, #f7f8fa 60%, #e0eaff 100%);
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.about-team h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #1e1e2f;
+}
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.team-member {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(79, 140, 255, 0.08);
+  padding: 28px 22px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.team-member:hover {
+  box-shadow: 0 8px 32px rgba(79, 140, 255, 0.18);
+  transform: translateY(-6px) scale(1.04);
+}
+.team-avatar {
+  background: linear-gradient(135deg, #ee821d 60%, #1e1e2f 100%);
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.12);
+}
+.team-member h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #ee821d;
+}
+.team-member p {
+  color: #444;
+  font-size: 0.98rem;
+  opacity: 0.9;
+}
+
+/* --- Call to Action Section --- */
+.about-cta {
+  background: #cf6d11;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0 60px 0;
+  position: relative;
+}
+.about-cta h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.about-cta p {
+  font-size: 1.15rem;
+  margin-bottom: 28px;
+  opacity: 0.95;
+}
+.about-btn {
+  display: inline-block;
+  background: #fff;
+  color: #e87306;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 14px 38px;
+  border-radius: 32px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(30, 30, 47, 0.08);
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+}
+.about-btn:hover {
+  background: #1e1e2f;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .about-cards,
+  .team-grid {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .about-card,
+  .team-member {
+    width: 90%;
+    max-width: 340px;
+  }
+}
+@media (max-width: 600px) {
+  .about-hero-content h1 {
+    font-size: 2.1rem;
+  }
+  .about-hero {
+    padding: 48px 0 32px 0;
+  }
+  .about-values,
+  .about-team,
+  .about-cta {
+    padding: 36px 0 24px 0;
+  }
+}

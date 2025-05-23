@@ -7,32 +7,35 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  // Öffnet/schließt das mobile Menü
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  // Zeigt oder versteckt den Button je nach Fensterbreite
   const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
+    setButton(window.innerWidth > 960);
   };
 
   useEffect(() => {
     showButton();
+    window.addEventListener('resize', showButton);
+    return () => window.removeEventListener('resize', showButton);
   }, []);
-
-  window.addEventListener('resize', showButton);
 
   return (
     <>
-      <nav className='navbar'>«
+      <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            GYMGATE 
-            <img src='/images/logo123.png' alt='GYMGATE Logo' className='footer-logo-image' />
+            GYMGATE
+            <img
+              src='/images/logo123.png'
+              alt='GYMGATE Logo'
+              className='footer-logo-image'
+              style={{ marginLeft: 10, height: 32, verticalAlign: 'middle' }}
+            />
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
+          <div className='menu-icon' onClick={handleClick} aria-label="Menü öffnen/schließen" tabIndex={0}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -42,35 +45,36 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link
-                to='/services'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
+              <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
                 Services
               </Link>
             </li>
             <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
+              <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
                 Products
               </Link>
             </li>
-
+            <li className='nav-item'>
+              <Link to='/functionsfeatures' className='nav-links' onClick={closeMobileMenu}>
+                Funktionen & Features
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/aboutus' className='nav-links' onClick={closeMobileMenu}>
+                About Us
+              </Link>
+            </li>
             <li>
-              <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
+              <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
                 Sign Up
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && (
+            <Button buttonStyle='btn--outline' onClick={() => closeMobileMenu()}>
+              SIGN UP
+            </Button>
+          )}
         </div>
       </nav>
     </>

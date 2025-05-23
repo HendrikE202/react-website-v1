@@ -1,0 +1,105 @@
+/* --- Hero Section --- */
+.ds-hero {
+  background: linear-gradient(120deg, #1e1e2f 60%, #ee821d 100%);
+  color: #fff;
+  padding: 70px 0 50px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ds-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+.ds-hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.92;
+}
+
+/* --- Content Section --- */
+.ds-content {
+  background: #fff;
+  padding: 48px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.ds-block {
+  background: #f7f8fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(238, 130, 29, 0.08);
+  padding: 36px 32px;
+  max-width: 700px;
+  width: 90%;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.ds-block h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ee821d;
+  margin-bottom: 14px;
+}
+
+.ds-block p {
+  color: #222;
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+}
+
+.ds-block ul {
+  margin-left: 18px;
+  margin-bottom: 0;
+  color: #444;
+  font-size: 1rem;
+  padding-left: 18px;
+}
+
+.ds-block ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.ds-contact {
+  background: #ffe6cc;
+}
+
+.ds-mail {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ee821d;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+}
+
+.ds-mail:hover {
+  color: #c86f0a;
+  text-decoration: underline;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 800px) {
+  .ds-block {
+    padding: 24px 12px;
+    max-width: 98vw;
+  }
+  .ds-hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .ds-hero {
+    padding: 40px 0 24px 0;
+  }
+  .ds-content {
+    padding: 24px 0 16px 0;
+    gap: 18px;
+  }
+}
