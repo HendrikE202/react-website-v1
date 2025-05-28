@@ -5,6 +5,50 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+:root {
+  --primary-orange: #e87306;
+  --accent-yellow: #ffd28c;
+  --background: #fff;
+  --text-black: #181818;
+  --box-bg: #fffbe9;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-black);
+  font-family: 'PT Sans', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-orange);
+  font-weight: 700;
+}
+
+a {
+  color: var(--primary-orange);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-yellow);
+}
+
+button, .btn {
+  background: var(--primary-orange);
+  color: #fff;
+  border-radius: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(232, 115, 6, 0.12);
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--accent-yellow);
+  color: var(--primary-orange);
+}
+
 .home,
 .services,
 .products,

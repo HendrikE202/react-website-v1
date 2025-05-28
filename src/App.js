@@ -9,6 +9,7 @@ import SignUp from './components/pages/SignUp';
 import FunctionsFeatures from './components/pages/FunctionsFeatures';
 import AboutUs from './components/pages/AboutUs';
 import DataSafetyGTC from './components/pages/DataSafetyGTC';
+import ContactAndSupport from './components/pages/ContactAndSupport';
  
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/functionsfeatures' component={FunctionsFeatures} />
           <Route path='/aboutus' component={AboutUs} />
           <Route path='/datasafetygtc' component={DataSafetyGTC} />
+          <Route path='/contactandsupport' component={ContactAndSupport} />
           {/* Add more routes as needed */}
         </Switch>
       </Router>

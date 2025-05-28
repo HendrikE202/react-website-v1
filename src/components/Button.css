@@ -1,43 +1,69 @@
 :root {
   --primary: #fff;
+  --primary-orange: #e87306;
+  --accent-yellow: #ffd28c;
+  --text-black: #181818;
 }
 
 .btn {
-  padding: 8px 20px;
-  border-radius: 2px;
+  padding: 10px 26px;
+  border-radius: 14px;
   outline: none;
   border: none;
   cursor: pointer;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(232, 115, 6, 0.10);
 }
 
 .btn--primary {
-  background-color: var(--primary);
-  color: #242424;
-  border: 1px solid var(--primary);
+  background-color: var(--primary-orange);
+  color: #fff;
+  border: 2px solid var(--primary-orange);
+}
+
+.btn--primary:hover {
+  background-color: var(--accent-yellow);
+  color: var(--primary-orange);
+  border: 2px solid var(--accent-yellow);
 }
 
 .btn--outline {
   background-color: transparent;
+  color: var(--primary-orange);
+  border: 2px solid var(--primary-orange);
+}
+
+.btn--outline:hover {
+  background-color: var(--primary-orange);
   color: #fff;
-  padding: 8px 20px;
-  border: 1px solid var(--primary);
-  transition: all 0.3s ease-out;
+  border: 2px solid var(--primary-orange);
 }
 
 .btn--medium {
-  padding: 8px 20px;
-  font-size: 18px;
+  padding: 10px 26px;
+  font-size: 1rem;
 }
 
 .btn--large {
-  padding: 12px 26px;
-  font-size: 20px;
+  padding: 14px 32px;
+  font-size: 1.15rem;
 }
 
-.btn--large:hover,
-.btn--medium:hover {
-  transition: all 0.3s ease-out;
-  background: #fff;
-  color: #242424;
-  transition: 250ms;
+.orange-btn {
+  background: var(--primary-orange);
+  color: #fff;
+  border-radius: 16px;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(232, 115, 6, 0.12);
+  transition: background 0.2s, color 0.2s;
+}
+
+.orange-btn:hover {
+  background: var(--accent-yellow);
+  color: var(--primary-orange);
 }

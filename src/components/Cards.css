@@ -1,15 +1,26 @@
+:root {
+  --primary-orange: #e87306;
+  --accent-yellow: #ffd28c;
+  --background: #fff;
+  --text-black: #181818;
+  --box-bg: #fffbe9;
+}
+
 .cards {
+  position: relative;
   padding: 4rem 0 4rem 0;
-  background: #fff;
+  background: var(--background);
+  overflow: hidden;
 }
 
 .cards h1 {
   text-align: center;
   font-size: 2.3rem;
   font-weight: 800;
-  color: #1e1e2f;
+  color: var(--primary-orange);
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
 }
 
 .cards__container {
@@ -40,28 +51,28 @@
   display: flex;
   flex: 1 1 300px;
   margin: 0 1rem;
-  border-radius: 14px;
+  border-radius: 16px;
   min-width: 260px;
   max-width: 340px;
-  background: #f7f8fa;
-  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.08);
-  transition: transform 0.18s;
+  background: var(--box-bg);
+  box-shadow: 0 4px 24px rgba(232, 115, 6, 0.10);
+  transition: transform 0.18s, box-shadow 0.18s;
 }
 
 .cards__item:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(79, 140, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(232, 115, 6, 0.18);
 }
 
 .cards__item__link {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.07);
+  box-shadow: 0 6px 20px rgba(232, 115, 6, 0.07);
   transition: box-shadow 0.2s;
 }
 
@@ -82,9 +93,10 @@
   font-size: 13px;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(90deg, #c86f0a 60%, #f7aa61 100%);
+  background: linear-gradient(90deg, var(--primary-orange) 60%, var(--accent-yellow) 100%);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.12);
+  box-shadow: 0 2px 8px rgba(232, 115, 6, 0.12);
+  letter-spacing: 0.5px;
 }
 
 .cards__item__img {
@@ -109,11 +121,33 @@
 }
 
 .cards__item__text {
-  color: #1e1e2f;
+  color: var(--primary-orange);
   font-size: 1.1rem;
   line-height: 1.5;
   font-weight: 600;
   letter-spacing: 0.2px;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+}
+
+.cards-mascot {
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.cards-mascot--left {
+  bottom: 40px;   /* jetzt unten links */
+  left: 2vw;
+  top: auto;
+  transform: scaleX(-1); /* Bild wird vertikal gespiegelt */
+}
+
+.cards-mascot--right {
+  top: 40px;      /* jetzt oben rechts */
+  right: 2vw;
+  bottom: auto;
 }
 
 @media only screen and (min-width: 1024px) {

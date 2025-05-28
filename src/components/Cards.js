@@ -5,6 +5,19 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='cards'>
+      {/* Maskottchen links, etwas weiter oben */}
+      <img
+        src='images/image25.png'
+        alt='Maskottchen links'
+        className='cards-mascot cards-mascot--left'
+      />
+      {/* Maskottchen rechts, etwas weiter unten, anderes Bild */}
+      <img
+        src='images/image27.png'
+        alt='Maskottchen rechts'
+        className='cards-mascot cards-mascot--right'
+      />
+
       <h1>Check us out!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
@@ -45,7 +58,7 @@ function Cards() {
               src='images/img-8.jpg'
               text='Kontakt & Support'
               label='Support'
-              path='/sign-up'
+              path='/contactandsupport'
             />
           </ul>
         </div>
