@@ -11,33 +11,35 @@ export default function ContactAndSupport() {
 
   return (
     <>
-      <div className="contact-support-section">
-        <h2>Kontakt & Support</h2>
-        <div className="contact-support-content">
-          <div className="contact-info">
-            <h3>Kontakt</h3>
-            <p>
-              Du hast Fragen oder Feedback? Schreib uns gerne eine Nachricht!
-            </p>
-            <form className="contact-form">
-              <input type="email" placeholder="Deine E-Mail" />
-              <input type="text" placeholder="Betreff" />
-              <textarea placeholder="Deine Nachricht" rows={5}></textarea>
-              <button type="submit">Absenden</button>
-            </form>
-          </div>
-          <div className="support-info">
-            <h3>Support</h3>
-            <ul>
-              <li>📞 Hotline: <span className="placeholder">0123 456789</span></li>
-              <li>✉️ E-Mail: <span className="placeholder">support@gymgate.de</span></li>
-              <li>🕒 Erreichbarkeit: <span className="placeholder">Mo-Fr 9-18 Uhr</span></li>
-              <li>💬 Live-Chat: <span className="placeholder">Bald verfügbar</span></li>
-              <li>FAQ: <span className="placeholder">Siehe <a href="/products">Hilfe & FAQ</a></span></li>
-            </ul>
-          </div>
+      <section className="contact-support-hero">
+        <div className="contact-support-hero-icon">🤝</div>
+        <h2>Wir sind für dich da!</h2>
+        <p className="contact-support-hero-text">
+          Egal ob Frage, Feedback oder Problem – unser Team hilft dir schnell und unkompliziert weiter.
+        </p>
+      </section>
+      <section className="contact-support-main">
+        <div className="contact-support-card">
+          <div className="contact-support-card-icon">📬</div>
+          <h3>Schreib uns direkt</h3>
+          <form className="contact-form">
+            <input type="text" placeholder="Betreff" />
+            <input type="email" placeholder="Deine E-Mail" />
+            <textarea placeholder="Deine Nachricht" rows={4}></textarea>
+            <button type="submit">Absenden</button>
+          </form>
         </div>
-      </div>
+        <div className="contact-support-card">
+          <div className="contact-support-card-icon">💡</div>
+          <h3>Weitere Kontaktmöglichkeiten</h3>
+          <ul className="support-list">
+            <li><span role="img" aria-label="phone">📞</span> Hotline: <span className="placeholder">0123 456789</span></li>
+            <li><span role="img" aria-label="mail">📧</span> E-Mail: <span className="placeholder">support@gymgate.de</span></li>
+            <li><span role="img" aria-label="clock">⏰</span> Mo-Fr 9-18 Uhr</li>
+            <li><span role="img" aria-label="faq">❓</span> <a href="/products">FAQ & Hilfe</a></li>
+          </ul>
+        </div>
+      </section>
       <Footer />
     </>
   );

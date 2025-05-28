@@ -1,6 +1,13 @@
+:root {
+  --primary-orange: #e87306;
+  --box-bg: #fff;
+  --text-black: #181818;
+  --card-shadow: 0 4px 24px rgba(232, 115, 6, 0.10);
+}
+
 .contact-support-section {
   padding: 60px 20px 40px 20px;
-  background: linear-gradient(135deg, #fffbe9 60%, #e87306 100%);
+  background: #fff; /* Nur weiß, kein Verlauf */
   min-height: 70vh;
 }
 
@@ -11,7 +18,7 @@
   font-size: 2.4rem;
   letter-spacing: 1.5px;
   font-family: 'PT Sans', 'Arial', sans-serif;
-  text-shadow: 0 4px 24px rgba(232, 115, 6, 0.13);
+  text-shadow: none;
 }
 
 .contact-support-content {
@@ -25,7 +32,7 @@
 }
 
 .contact-info, .support-info {
-  background: linear-gradient(120deg, #fff3e0 70%, #ffd28c 100%);
+  background: #fffbe9;
   border-radius: 22px;
   box-shadow: 0 8px 32px rgba(232, 115, 6, 0.10);
   padding: 36px 28px;
@@ -47,72 +54,147 @@
   letter-spacing: 1px;
 }
 
-.contact-form {
+.contact-support-hero {
+  background: #fff;
+  text-align: center;
+  padding: 56px 16px 32px 16px;
+}
+
+.contact-support-hero-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.contact-support-hero h2 {
+  color: var(--primary-orange);
+  font-size: 2.2rem;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.contact-support-hero-text {
+  color: var(--text-black);
+  font-size: 1.15rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-support-main {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 48px auto;
+}
+
+.contact-support-card {
+  background: var(--box-bg);
+  border-radius: 22px;
+  box-shadow: var(--card-shadow);
+  padding: 36px 28px;
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.contact-support-card:hover {
+  box-shadow: 0 8px 32px rgba(232, 115, 6, 0.18);
+  transform: translateY(-4px) scale(1.025);
+}
+
+.contact-support-card-icon {
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+  color: var(--primary-orange);
+}
+
+.contact-support-card h3 {
+  color: var(--primary-orange);
+  margin-bottom: 18px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
   border-radius: 10px;
-  border: 2px solid #ffd28c;
+  border: 2px solid #ececec;
   font-size: 1rem;
-  background: #fffbe9;
+  background: #fff;
   transition: border 0.2s, box-shadow 0.2s;
   outline: none;
+  color: var(--text-black);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border: 2px solid #e87306;
-  box-shadow: 0 0 0 2px #ffd28c;
+  border: 2px solid var(--primary-orange);
+  box-shadow: 0 0 0 2px #ffe5d0;
 }
 
 .contact-form button {
-  background: linear-gradient(90deg, #e87306 60%, #ffd28c 100%);
+  background: var(--primary-orange);
   color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 14px;
+  padding: 12px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 12px rgba(232, 115, 6, 0.13);
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s;
   letter-spacing: 1px;
 }
 
 .contact-form button:hover {
-  background: linear-gradient(90deg, #c25704 60%, #ffd28c 100%);
-  box-shadow: 0 4px 24px rgba(232, 115, 6, 0.22);
+  background: #fff;
+  color: var(--primary-orange);
+  border: 2px solid var(--primary-orange);
 }
 
-.support-info ul {
+.support-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
-.support-info li {
-  margin-bottom: 14px;
+.support-list li {
+  margin-bottom: 16px;
   font-size: 1.08rem;
-  color: #c25704;
+  color: var(--text-black);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.support-info a {
-  color: #e87306;
+.support-list a {
+  color: var(--primary-orange);
   text-decoration: underline;
   transition: color 0.2s;
 }
 
-.support-info a:hover {
-  color: #c25704;
+.support-list a:hover {
+  color: var(--text-black);
 }
 
 .placeholder {
@@ -122,14 +204,16 @@
 
 /* Responsive Design */
 @media (max-width: 900px) {
-  .contact-support-content {
+  .contact-support-main {
     flex-direction: column;
     gap: 24px;
     max-width: 100%;
+    align-items: center;
   }
-  .contact-info, .support-info {
+  .contact-support-card {
     min-width: 0;
     width: 100%;
+    max-width: 95vw;
     padding: 24px 10px;
   }
 }
