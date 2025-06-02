@@ -1,6 +1,6 @@
 :root {
   --primary-orange: #e87306;
-  --accent-yellow: #ffd28c;
+  --accent-yellow: #ffc08c;
   --background: #fff;
   --text-black: #181818;
   --box-bg: #fffbe9;
@@ -138,16 +138,57 @@
 }
 
 .cards-mascot--left {
-  bottom: 40px;   /* jetzt unten links */
-  left: 2vw;
+  bottom: 60px;   /* jetzt unten links */
+  left: 22vw;
   top: auto;
   transform: scaleX(-1); /* Bild wird vertikal gespiegelt */
+}
+
+.cards-mascot--topleft {
+  top: 20px;      /* jetzt oben links */
+  left: 18vw;
+  bottom: auto;
+  transform: scaleX(-1);
 }
 
 .cards-mascot--right {
   top: 40px;      /* jetzt oben rechts */
   right: 2vw;
   bottom: auto;
+}
+
+.cards-mascot--bottomright {
+  bottom: 60px;      /* jetzt unten rechts */
+  right: 22vw;
+  top: auto;
+}
+.cards-download-section {
+  margin: 48px auto 0 auto;
+  padding: 32px 0 0 0;
+  text-align: center;
+}
+
+.cards-download-section h2 {
+  color: #e87306;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.download-btn img {
+  height: 54px;
+  transition: transform 0.18s;
+}
+
+.download-btn img:hover {
+  transform: scale(1.07);
 }
 
 @media only screen and (min-width: 1024px) {

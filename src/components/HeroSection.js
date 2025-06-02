@@ -6,26 +6,35 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>YOUR NEXT TRAINING AWAITS</h1>
-      <p>What are you waiting for?</p>
-      <p>Join us for the best training experience!</p>
-      <div className='hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={() => console.log('hey')}
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button>
+      <div className="hero-content">
+        <div className="hero-text">
+          <h1>Starte jetzt mit GymGate!</h1>
+          <p>Deine smarte Trainings-App – einfach, motivierend, individuell.</p>
+          <div className='hero-btns'>
+            <Button
+              className='btns'
+              buttonStyle='btn--primary'
+              buttonSize='btn--large'
+              to='/sign-up'
+            >
+              App entdecken
+            </Button>
+            <Button
+              className='btns'
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              to='/login'
+            >
+              Ich habe schon ein Konto
+            </Button>
+          </div>
+        </div>
+        <div className="hero-visual">
+          <div className="hero-phone">
+            <img src="/images/image30.png" alt="App auf Handy" className="hero-phone-img" />
+            {/* <img src="/images/image24.png" alt="Maskottchen" className="hero-mascot" /> */}
+          </div>
+        </div>
       </div>
     </div>
   );

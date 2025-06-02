@@ -5,17 +5,17 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='cards'>
-      {/* Maskottchen links, etwas weiter oben */}
+      {/* Maskottchen rechts, etwas weiter unten */}
       <img
         src='images/image25.png'
         alt='Maskottchen links'
-        className='cards-mascot cards-mascot--left'
+        className='cards-mascot cards-mascot--bottomright'
       />
-      {/* Maskottchen rechts, etwas weiter unten, anderes Bild */}
+      {/* Maskottchen links, etwas weiter oben, anderes Bild */}
       <img
         src='images/image27.png'
-        alt='Maskottchen rechts'
-        className='cards-mascot cards-mascot--right'
+        alt='Maskottchen links'
+        className='cards-mascot cards-mascot--topleft'
       />
 
       <h1>Check us out!</h1>
@@ -32,7 +32,7 @@ function Cards() {
               src='images/img-2.jpg'
               text='Community'
               label='Community'
-              path='/services'
+              path='/community'
             />
             <CardItem
               src='images/img-5.jpg'
@@ -55,12 +55,34 @@ function Cards() {
               path='/products'
             />
             <CardItem
-              src='images/img-8.jpg'
+              src='images/img-23.jpg'
               text='Kontakt & Support'
               label='Support'
               path='/contactandsupport'
             />
           </ul>
+        </div>
+      </div>
+      {/* Download-Bereich unter den Cards */}
+      <div className="cards-download-section">
+        <h2>Jetzt kostenlos herunterladen</h2>
+        <div className="download-buttons">
+          <a
+            href="https://apps.apple.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-btn"
+          >
+            <img src="/images/appstore-badge.png" alt="App Store" />
+          </a>
+          <a
+            href="https://play.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-btn"
+          >
+            <img src="/images/playstore-badge.png" alt="Google Play" />
+          </a>
         </div>
       </div>
     </div>

@@ -1,4 +1,11 @@
 /* FeaturesSection.css */
+:root {
+  --primary-orange: #e87306;
+  --background: #fff;
+  --text-black: #181818;
+  --box-bg: #fffbe9;
+}
+
 .features-section {
   padding: 60px 0 64px 0;
   background: linear-gradient(135deg, #ffffff 60%, #e87306 100%);
@@ -56,12 +63,12 @@
 }
 
 .feature-image {
-  width: 340px;
-  max-width: 100%;
+  width: 380px;
+  max-width: 95vw;
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  box-shadow: 0 8px 32px rgba(232, 115, 6, 0.13);
   border: 4px solid #fff3e0;
-  transition: border 0.2s;
+  transition: border 0.2s, box-shadow 0.2s;
   display: block;
 }
 
@@ -95,6 +102,111 @@
   color: #000000;
 }
 
+/* Walkthrough Features */
+.features-walkthrough {
+  background: var(--background);
+  padding: 60px 0 64px 0;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-walkthrough h2 {
+  color: var(--primary-orange);
+  font-size: 2.5rem;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+  font-weight: 800;
+  margin-bottom: 48px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.features-walkthrough-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.walkthrough-step {
+  background: var(--box-bg);
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(232, 115, 6, 0.10);
+  padding: 32px 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 260px;
+  min-width: 220px;
+  flex: 1 1 220px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.walkthrough-step:hover {
+  box-shadow: 0 8px 32px rgba(232, 115, 6, 0.18);
+  transform: translateY(-6px) scale(1.035);
+}
+
+.walkthrough-img-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.walkthrough-img {
+  width: 120px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(232, 115, 6, 0.13);
+  background: #fff;
+}
+
+.walkthrough-step h3 {
+  color: var(--primary-orange);
+  font-size: 1.18rem;
+  margin: 12px 0 10px 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.walkthrough-step p {
+  color: var(--text-black);
+  font-size: 1.05rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Extra Info Section */
+.features-extra-info {
+  max-width: 700px;
+  margin: 48px auto 0 auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(232, 115, 6, 0.07);
+  text-align: center;
+}
+
+.features-extra-info h3 {
+  color: #e87306;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+}
+
+.features-extra-info p {
+  color: #181818;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 1100px) {
   .feature,
@@ -126,5 +238,22 @@
   .feature-text {
     max-width: 100%;
     align-items: center;
+  }
+  .features-walkthrough-list {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .walkthrough-step {
+    max-width: 95vw;
+    min-width: 0;
+    width: 100%;
+  }
+  .walkthrough-img {
+    width: 90px;
+    height: 160px;
+  }
+  .features-walkthrough h2 {
+    font-size: 2rem;
   }
 }

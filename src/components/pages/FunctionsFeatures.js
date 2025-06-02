@@ -1,54 +1,61 @@
 import React, { useEffect } from "react";
 import "../../App.css";
 import Footer from "../Footer";
-import HeroSection from "../HeroSection";
 import "./FunctionsFeatures.css";
 
-
-//Effect Hook to scroll to top on component mount
 export default function FunctionsFeatures() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Beispiel-Screenshots, du kannst eigene Bilder einsetzen!
+  const features = [
+    {
+      img: "/images/img-1.jpg",
+      title: "Alles im Blick",
+      desc: "Dein Dashboard zeigt dir Fortschritt, Ziele und Motivation auf einen Blick."
+    },
+    {
+      img: "/images/img-1.jpg",
+      title: "Community erleben",
+      desc: "Vernetze dich, teile Erfolge und finde Trainingspartner:innen."
+    },
+    {
+      img: "/images/img-1.jpg",
+      title: "Eigene Pläne erstellen",
+      desc: "Stelle dir individuelle Trainingspläne zusammen – einfach und flexibel."
+    },
+    {
+      img: "/images/img-1.jpg",
+      title: "Smarte Erinnerungen",
+      desc: "Verpasse keine wichtigen Updates oder Trainings mehr dank smarter Push-Benachrichtigungen."
+    }
+  ];
+
   return (
     <>
-
-      <section className="features-section">
-        <h2>App Funktionen & Features</h2>
-        
-        <div className="feature">
-          <img src="/images/img-8.jpg" alt="Feature 1" className="feature-image" />
-          <div className="feature-text">
-            <h3>Intuitives Dashboard</h3>
-            <p>Behalte alle wichtigen Infos und Statistiken auf einen Blick im modernen Dashboard im Auge.</p>
-          </div>
+      <section className="features-walkthrough">
+        <h2>So funktioniert GymGate</h2>
+        <div className="features-walkthrough-list">
+          {features.map((feature, idx) => (
+            <div className="walkthrough-step" key={idx}>
+              <div className="walkthrough-img-wrap">
+                <img src={feature.img} alt={feature.title} className="walkthrough-img" />
+              </div>
+              <h3>{feature.title}</h3>
+              <p>{feature.desc}</p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <div className="feature feature--reverse">
-          <img src="/images/img-8.jpg" alt="Feature 2" className="feature-image" />
-          <div className="feature-text">
-            <h3>Community Austausch</h3>
-            <p>Vernetze dich mit anderen Nutzern, teile Erfolge und motiviere dich gegenseitig.</p>
-          </div>
-        </div>
-
-        <div className="feature">
-          <img src="/images/img-8.jpg" alt="Feature 3" className="feature-image" />
-          <div className="feature-text">
-            <h3>Individuelle Trainingspläne</h3>
-            <p>Erstelle und verwalte deine eigenen Trainingspläne – perfekt abgestimmt auf deine Ziele.</p>
-          </div>
-        </div>
-
-        <div className="feature feature--reverse">
-          <img src="/images/img-8.jpg" alt="Feature 4" className="feature-image" />
-          <div className="feature-text">
-            <h3>Push-Benachrichtigungen</h3>
-            <p>Verpasse keine wichtigen Updates oder Trainings mehr dank smarter Erinnerungen.</p>
-          </div>
-        </div>
-
+      <section className="features-extra-info">
+        <h3>Warum GymGate?</h3>
+        <p>
+          GymGate vereint Motivation, Community und smarte Trainingsplanung in einer App. 
+          Egal ob Anfänger:in oder Profi – mit GymGate erreichst du deine Ziele einfacher, 
+          bleibst am Ball und hast immer alles im Blick. Starte jetzt und werde Teil unserer Community!
+        </p>
       </section>
 
       <Footer />

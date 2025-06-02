@@ -7,41 +7,90 @@ video {
 }
 
 .hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-  height: 100vh;
-  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 60px 0 40px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  width: 90%;
+}
+
+.hero-text {
+  max-width: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  object-fit: contain;
+  align-items: flex-start;
 }
 
-.hero-container > h1 {
-  color: #fff;
-  font-size: 100px;
-  margin-top: -100px;
+.hero-text h1 {
+  color: #e87306;
+  font-size: 2.7rem;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+  font-weight: 800;
+  margin-bottom: 18px;
 }
 
-.hero-container > p {
-  margin-top: 8px;
-  color: #fff;
-  font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+.hero-text p {
+  color: #181818;
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+  line-height: 1.5;
 }
 
 .hero-btns {
-  margin-top: 32px;
+  display: flex;
+  flex-direction: column; /* Buttons untereinander */
+  gap: 16px;
+  align-items: flex-start;
 }
 
-.hero-btns .btn {
-  margin: 6px;
+@media (max-width: 600px) {
+  .hero-btns {
+    width: 100%;
+    align-items: stretch;
+  }
 }
 
-.fa-play-circle {
-  margin-left: 4px;
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-phone {
+  position: relative;
+  width: 240px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-phone-img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgb(255, 255, 255);
+  background: #fff;
+}
+
+.hero-mascot {
+  position: absolute;
+  bottom: -32px;
+  right: -32px;
+  width: 90px;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 4px 16px rgba(232, 115, 6, 0.13));
 }
 
 @media screen and (max-width: 960px) {
@@ -68,5 +117,22 @@ video {
 
   .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .hero-phone {
+    width: 180px;
+    height: 360px;
+  }
+  .hero-mascot {
+    width: 60px;
+    bottom: -18px;
+    right: -18px;
   }
 }

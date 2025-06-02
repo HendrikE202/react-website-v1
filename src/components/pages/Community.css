@@ -1,0 +1,90 @@
+.community-page {
+  background: #fff;
+  min-height: 100vh;
+  font-family: 'Nunito', 'PT Sans', Arial, sans-serif;
+}
+
+/* Hero Section */
+.community-hero {
+  background: linear-gradient(120deg, #1e1e2f 60%, #e87306 100%);
+  color: #fff;
+  padding: 80px 0 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.community-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.community-hero p {
+  font-size: 1.18rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+/* Main Sections */
+.community-main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  padding: 60px 0 80px 0;
+  background: #fff;
+}
+.community-section {
+  background: #f7f8fa;
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.08);
+  padding: 38px 32px 32px 32px;
+  max-width: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.community-section:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(79, 140, 255, 0.18);
+}
+
+/* Button */
+.community-action-btn {
+  background: #fff;
+  color: #e87306;
+  border: 2px solid #e87306;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(30, 30, 47, 0.08);
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+  margin-top: 8px;
+}
+.community-action-btn:hover {
+  background: #1e1e2f;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .community-section {
+    max-width: 98vw;
+    padding: 28px 8vw 24px 8vw;
+  }
+  .community-hero h1 {
+    font-size: 2rem;
+  }
+  .community-main {
+    gap: 32px;
+    padding: 32px 0 40px 0;
+  }
+}
