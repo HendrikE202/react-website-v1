@@ -108,6 +108,38 @@
   display: none;
 }
 
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 18px;
+}
+
+.lang-switcher button,
+.lang-switcher select {
+  background: #fff;
+  color: #e87306;
+  border: 1.5px solid #e87306;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.18s, color 0.18s;
+}
+
+.lang-switcher button.active,
+.lang-switcher select:focus {
+  background: #e87306;
+  color: #fff;
+}
+
+.navbar-auth-btns {
+  display: flex;
+  gap: 10px; /* Abstand zwischen den Buttons */
+  align-items: center;
+}
+
 @media screen and (max-width: 960px) {
   .navbar-container {
     flex-direction: row;

@@ -70,11 +70,23 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && (
-            <Button buttonStyle='btn--primary' onClick={() => closeMobileMenu()}>
-              SIGN UP
-            </Button>
-          )}
+          <div className="navbar-auth-btns">
+            {button && (
+              <Button buttonStyle='btn--primary' onClick={() => closeMobileMenu()}>
+                LOG IN
+              </Button>
+            )}
+            {button && (
+              <Button buttonStyle='btn--primary' onClick={() => closeMobileMenu()}>
+                SIGN UP
+              </Button>
+            )}
+          </div>
+          <div className="lang-switcher">
+            <button>DE</button>
+            <span>|</span>
+            <button>EN</button>
+          </div>
         </div>
       </nav>
     </>
